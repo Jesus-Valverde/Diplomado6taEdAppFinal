@@ -19,6 +19,8 @@ import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+// import com.github.bumptech.Glide;
+
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
@@ -34,34 +36,38 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         models = new ArrayList<>();
 
-        String url = "https://www.rmgserver.net/diplomado";
+        String url = "http://192.168.10.15:3000/buscarComic/thor";
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
                 (Request.Method.GET, url, null, response -> {
                     try {
 
-                        JSONArray jsonArray = response.getJSONArray("data" );
-                        System.out.println("data " +jsonArray );
+                        JSONArray jsonArray = response.getJSONArray("comics" );
+                        System.out.println("comics " +jsonArray );
 
 
                         for(int i = 0; i< jsonArray.length(); i++) {
 
                             JSONObject jsonObject = jsonArray.getJSONObject(i );
 
-                            String nombre = jsonObject.getString("nombre" );
-                            String apellidos = jsonObject.getString("apellidos" );
-                            String correo = jsonObject.getString("correo" );
+                            String id = jsonObject.getString("id" );
+                            String issueNumber = jsonObject.getString("issueNumber" );
+                            String onSaleDate = jsonObject.getString("onSaleDate" );
+                            String pageCount = jsonObject.getString("pageCount" );
+                            String title = jsonObject.getString("title" );
 
-                            System.out.println("name " +nombre );
-                            System.out.println("email " +correo );
-                            System.out.println("post " +apellidos );
+                            System.out.println("id " +id );
+                            System.out.println("issueNumber " +issueNumber );
+                            System.out.println("onSaleDate " +onSaleDate );
+                            System.out.println("pageCount " +pageCount );
+                            System.out.println("title " +title );
 
                             Model model = new Model( );
                             model.setId(jsonObject.getString("id"));
-                            model.setNombre(jsonObject.getString("nombre"));
-                            model.setApellidos(jsonObject.getString("apellidos"));
-                            model.setCorreo(jsonObject.getString("correo"));
-                            model.setGrupo(jsonObject.getString("grupo"));
+                            model.setIssueNumber(jsonObject.getString("issueNumber"));
+                            model.setOnSaleDate(jsonObject.getString("onSaleDate"));
+                            model.setPageCount(jsonObject.getString("pageCount"));
+                            model.setTitle(jsonObject.getString("title"));
                             models.add(model);
                         }
 

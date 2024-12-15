@@ -49,5 +49,5 @@ dependencies {
 
     // Nuevas librerías
     implementation(libs.volley)
-
+    implementation(libs.glide)
 }

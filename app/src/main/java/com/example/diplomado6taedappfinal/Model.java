@@ -1,7 +1,7 @@
 package com.example.diplomado6taedappfinal;
 
 public class Model {
-    String id, nombre, apellidos, correo, grupo;
+    String id, issueNumber, onSaleDate, pageCount, title;
 
     public String getId() {
         return id;
@@ -11,35 +11,35 @@ public class Model {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getIssueNumber() {
+        return issueNumber;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setIssueNumber(String issueNumber) {
+        this.issueNumber = issueNumber;
     }
 
-    public String getApellidos() {
-        return apellidos;
+    public String getOnSaleDate() {
+        return onSaleDate;
     }
 
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+    public void setOnSaleDate(String onSaleDate) {
+        this.onSaleDate = onSaleDate;
     }
 
-    public String getCorreo() {
-        return correo;
+    public String getPageCount() {
+        return pageCount;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setPageCount(String pageCount) {
+        this.pageCount = pageCount;
     }
 
-    public String getGrupo() {
-        return grupo;
+    public String getTitle() {
+        return title;
     }
 
-    public void setGrupo(String grupo) {
-        this.grupo = grupo;
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

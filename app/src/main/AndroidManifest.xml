@@ -5,7 +5,9 @@
     <!-- Otorgar permisos de acceso a internet -->
     <uses-permission android:name="android.permission.INTERNET"/>
 
+        <!-- Agregar usesClearTextTraffic -->
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"

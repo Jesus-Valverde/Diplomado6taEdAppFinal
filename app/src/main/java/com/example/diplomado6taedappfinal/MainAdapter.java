@@ -33,10 +33,10 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         holder.id.setText(models.get(position).getId());
-        holder.nombre.setText(models.get(position).getNombre());
-        holder.apellidos.setText(models.get(position).getApellidos());
-        holder.correo.setText(models.get(position).getCorreo());
-        holder.grupo.setText(models.get(position).getGrupo());
+        holder.issueNumber.setText(models.get(position).getIssueNumber());
+        holder.onSaleDate.setText(models.get(position).getOnSaleDate());
+        holder.pageCount.setText(models.get(position).getPageCount());
+        holder.title.setText(models.get(position).getTitle());
 
     }
 
@@ -46,15 +46,15 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView id, nombre, apellidos, correo, grupo;
+        TextView id, issueNumber, onSaleDate, pageCount, title;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             id = itemView.findViewById(R.id.id);
-            nombre = itemView.findViewById(R.id.nombre);
-            apellidos = itemView.findViewById(R.id.apellidos);
-            correo = itemView.findViewById(R.id.correo);
-            grupo = itemView.findViewById(R.id.grupo);
+            issueNumber = itemView.findViewById(R.id.issueNumber);
+            onSaleDate = itemView.findViewById(R.id.onSaleDate);
+            pageCount = itemView.findViewById(R.id.pageCount);
+            title = itemView.findViewById(R.id.title);
         }
     }
 }

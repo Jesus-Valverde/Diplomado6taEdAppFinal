@@ -30,10 +30,10 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/nombre"
+            android:id="@+id/issueNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nombre"
+            android:text="IssueNumber"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.08"
@@ -42,10 +42,10 @@
             app:layout_constraintVertical_bias="0.099" />
 
         <TextView
-            android:id="@+id/apellidos"
+            android:id="@+id/onSaleDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Apellidos"
+            android:text="OnSaleDate"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.08"
@@ -54,10 +54,10 @@
             app:layout_constraintVertical_bias="0.405" />
 
         <TextView
-            android:id="@+id/correo"
+            android:id="@+id/pageCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Correo"
+            android:text="pageCount"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.08"
@@ -66,10 +66,10 @@
             app:layout_constraintVertical_bias="0.683" />
 
         <TextView
-            android:id="@+id/grupo"
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Grupo"
+            android:text="Title"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.08"
